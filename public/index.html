@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTOP โค้งสนามเป้า</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">OTOP โค้งสนามเป้า</div>
+    <ul class="menu">
+      <li><a href="#hero">หน้าหลัก</a></li>
+      <li><a href="#products">สินค้า</a></li>
+      <li><a href="#contact">ติดต่อ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <img src="assets/logo.jpg" alt="สินค้า OTOP จันทบุรี" class="hero-img">
+    <div class="hero-text">
+      <h1>เสน่ห์งานมือ ชุมชนสร้างสรรค์ สินค้า OTOP <br>กลางจันทบุรี</h1>
+      <p>สืบสานภูมิปัญญา รังสรรค์ด้วยความรัก ส่งตรงจากใจคนในชุมชน</p>
+      <a href="#products" class="btn">ดูสินค้า OTOP ชุมชนเรา</a>
+    </div>
+  </section>
+
+  <!-- ADD PRODUCT FORM SECTION -->
+  <section class="add-form-section">
+    <h2 class="section-title">➕ เพิ่มผลิตภัณฑ์ใหม่</h2>
+
+    <form id="add-product-form" class="add-form" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="product-name">ชื่อผลิตภัณฑ์ *</label>
+        <input type="text" id="product-name" name="name" required placeholder="เช่น น้ำพริกเผา">
+      </div>
+
+      <div class="form-group">
+        <label for="product-producer">ผู้ผลิต/กลุ่ม *</label>
+        <input type="text" id="product-producer" name="producer" required placeholder="เช่น กลุ่มแม่บ้านบ้านโคก">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="product-price">ราคา (บาท) *</label>
+          <input type="number" id="product-price" name="price" required min="1" placeholder="60">
+        </div>
+
+        <div class="form-group">
+          <label for="product-category">หมวดหมู่ *</label>
+          <select id="product-category" name="category" required>
+            <option value="">-- เลือกหมวดหมู่ --</option>
+            <option value="อาหาร/เครื่องดื่ม">🍯 อาหาร/เครื่องดื่ม</option>
+            <option value="ผ้า/เครื่องแต่งกาย">👗 ผ้า/เครื่องแต่งกาย</option>
+            <option value="เครื่องประดับ/หัตถกรรม">💍 เครื่องประดับ/หัตถกรรม</option>
+            <option value="สมุนไพร/สุขภาพ">🌿 สมุนไพร/สุขภาพ</option>
+            <option value="ของใช้/ของตกแต่ง">🏺 ของใช้/ของตกแต่ง</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="product-contact">เบอร์ติดต่อ (ถ้ามี)</label>
+        <input type="tel" id="product-contact" name="contact" placeholder="081-234-5678">
+      </div>
+
+      <div class="form-group">
+        <label for="product-image">รูปภาพ (jpg, png, webp - ไม่เกิน 5MB)</label>
+        <input type="file" id="product-image" name="image" accept="image/jpeg,image/png,image/webp">
+      </div>
+
+      <button type="submit" class="submit-btn">➕ เพิ่มผลิตภัณฑ์</button>
+    </form>
+  </section>
+
+  <!-- CARD GRID -->
+  <section class="cards-section" id="products">
+    <h2 class="section-title">สินค้า OTOP ชุมชนโค้งสนามเป้า</h2>
+
+    <!-- Container สำหรับ JavaScript ดึงข้อมูลมาแสดง -->
+    <div class="card-grid" id="products-container"></div>
+  </section>  
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>ติดต่อเรา</h4>
+        <p>โทร 082-035-6462</p>
+        <p>อีเมล OTOPCHONGSNAMPAO@gmail.com</p>
+        <p>ชุมชนโค้งสนามเป้า ต.ท่าช้าง จ.จันทบุรี 22000</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>โซเชียลมีเดีย</h4>
+        <p><a href="#" target="_blank" rel="noopener">Facebook: OTOP ชุมชนโค้งสนามเป้า</a></p>
+        <p><a href="#" target="_blank" rel="noopener">Instagram: @OTOP_CONGSNAMPAO</a></p>
+        <p><a href="#" target="_blank" rel="noopener">LINE: @OTOP_CONGSNAMPAO</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>เกี่ยวกับเรา</h4>
+        <p>สืบสานภูมิปัญญา รังสรรค์ด้วยความรัก ส่งตรงจากใจคนในชุมชน</p>
+      </div>
+    </div>
+
+    <p class="copyright">© 2569 OTOP โค้งสนามเป้า — สงวนลิขสิทธิ์</p>
+  </footer>
+
+  <!-- EDIT MODAL -->
+  <div id="edit-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>✏️ แก้ไขผลิตภัณฑ์</h2>
+        <button type="button" class="modal-close" id="modal-close">✕</button>
+      </div>
+
+      <form id="edit-form" class="edit-form" enctype="multipart/form-data">
+        <input type="hidden" id="edit-id">
+
+        <div class="form-group">
+          <label for="edit-name">ชื่อผลิตภัณฑ์ *</label>
+          <input type="text" id="edit-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-producer">ผู้ผลิต/กลุ่ม *</label>
+          <input type="text" id="edit-producer" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="edit-price">ราคา *</label>
+            <input type="number" id="edit-price" required min="1">
+          </div>
+
+          <div class="form-group">
+            <label for="edit-category">หมวดหมู่ *</label>
+            <select id="edit-category" required>
+              <option value="อาหาร/เครื่องดื่ม">🍯 อาหาร/เครื่องดื่ม</option>
+              <option value="ผ้า/เครื่องแต่งกาย">👗 ผ้า/เครื่องแต่งกาย</option>
+              <option value="เครื่องประดับ/หัตถกรรม">💍 เครื่องประดับ/หัตถกรรม</option>
+              <option value="สมุนไพร/สุขภาพ">🌿 สมุนไพร/สุขภาพ</option>
+              <option value="ของใช้/ของตกแต่ง">🏺 ของใช้/ของตกแต่ง</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-contact">เบอร์ติดต่อ</label>
+          <input type="tel" id="edit-contact">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="cancel-btn" id="cancel-btn">ยกเลิก</button>
+          <button type="submit" class="submit-btn">💾 บันทึก</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
